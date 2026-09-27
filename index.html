@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эволюция Внешности — Прогрессивные Онлайн-Курсы Трансформации</title>
+    <style>
+        /* --- БАЗОВЫЕ И ПРЕМИУМ СТИЛИ (CSS) --- */
+        :root {
+            --bg-dark: #121212;
+            --bg-light: #f9f9f9;
+            --accent-gold: #c5a880;
+            --text-dark: #1a1a1a;
+            --text-light: #ffffff;
+            --text-muted: #666666;
+            --border-color: #e0e0e0;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* --- КНОПКИ --- */
+        .btn {
+            display: inline-block;
+            background-color: var(--accent-gold);
+            color: var(--text-dark);
+            padding: 15px 35px;
+            border: none;
+            font-weight: bold;
+            text-transform: uppercase;
+            font-size: 14px;
+            letter-spacing: 1px;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #b3966e;
+            transform: translateY(-2px);
+        }
+
+        /* --- ШАПКА САЙТА --- */
+        header {
+            background-color: var(--bg-dark);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 1px solid #222;
+        }
+
+        .header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            color: var(--text-light);
+            font-size: 22px;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav a {
+            color: #aaa;
+            text-decoration: none;
+            margin-left: 25px;
+            font-size: 14px;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        /* --- ГЛАВНЫЙ ЭКРАН --- */
+        .hero {
+            background-linear-gradient: rgba(0,0,0,0.7), rgba(0,0,0,0.7);
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 140px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            font-weight: 300;
+            margin-bottom: 20px;
+            letter-spacing: 1px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ccc;
+            max-width: 800px;
+            margin: 0 auto 40px auto;
+        }
+
+        /* --- СЕКЦИИ --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: var(--text-muted);
+            margin-bottom: 50px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* --- БЛОК ЭКСПЕРТОВ (ТАБЫ 1) --- */
+        .expert-tabs-nav {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 40px;
+            gap: 15px;
+        }
+
+        .tab-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            padding: 12px 25px;
+            cursor: pointer;
+            font-size: 15px;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active, .tab-btn:hover {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            border-color: var(--bg-dark);
+        }
+
+        .expert-grid {
+            display: none;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .expert-grid.active {
+            display: grid;
+        }
+
+        .expert-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            padding: 25px;
+            text-align: center;
+        }
+
+        .expert-photo {
+            width: 140px;
+            height: 140px;
+            background-color: #eee;
+            border-radius: 50%;
+            margin: 0 auto 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #999;
+            font-size: 12px;
+            text-transform: uppercase;
+            border: 2px solid var(--accent-gold);
+        }
+
+        .expert-card h4 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .expert-status {
+            color: var(--accent-gold);
+            font-size: 13px;
+            text-transform: uppercase;
+            margin-bottom: 15px;
+            font-weight: bold;
+        }
+
+        .expert-contacts {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border-color);
+            font-size: 13px;
+            color: var(--text-muted);
+        }
+
+        /* --- БЛОК БРЕНДОВ --- */
+        .brands-bg {
+            background-color: #f0f0f0;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .brands-grid {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .brand-item {
+            font-size: 22px;
+            font-weight: bold;
+            color: #555;
+            letter-spacing: 3px;
+        }
+
+        .brand-item.highlight {
+            color: var(--text-dark);
+            border: 2px solid var(--accent-gold);
+            padding: 5px 15px;
+        }
+
+        /* --- МУЖСКОЙ И ЖЕНСКИЙ РАЗДЕЛЫ --- */
+        .gender-nav {
+            display: flex;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            border: 1px solid var(--bg-dark);
+        }
+
+        .gender-btn {
+            flex: 1;
+            background: none;
+            border: none;
+            padding: 15px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+        }
+
+        .gender-btn.active {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+        }
+
+        .gender-content {
+            display: none;
+        }
+
+        .gender-content.active {
+            display: block;
+        }
+
+        .problem-solution-box {
+            background: #fff;
+            border-left: 4px solid var(--accent-gold);
+            padding: 30px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+        }
+
+        .problem-title {
+            font-size: 20px;
+            color: #d9534f;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+
+        .problem-reason {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            font-style: italic;
+        }
+
+        .solution-title {
+            font-size: 16px;
+            font-weight: bold;
+            color: #2b542c;
+            margin-bottom: 5px;
+        }
+
+        /* --- ПОДВАЛ --- */
+        footer {
+            background-color: var(--bg-dark);
+            color: #888;
+            padding: 60px 0 30px 0;
+            font-size: 14px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col p, .footer-col a {
+            color: #888;
+            text-decoration: none;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-gold);
+        }
+
+        .disclaimer {
+            border-top: 1px solid #222;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 12px;
+            color: #555;
+        }
+
+        /* --- АДАПТИВНОСТЬ ДЛЯ МОБИЛЬНЫХ --- */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 32px; }
+            .header-flex { flex-direction: column; gap: 15px; }
+            nav a { margin: 0 10px; }
+            .expert-tabs-nav { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ШАПКА САЙТА -->
+    <header>
+        <div class="container header-flex">
+            <div class="logo">EVOLUTION<span>.</span></div>
+            <nav>
+                <a href="#experts">Эксперты</a>
+                <a href="#brands">Стандарты</a>
+                <a href="#programs">Программы борьбы с болями</a>
+                <a href="#footer">Контакты</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- ГЛАВНЫЙ ЭКРАН -->
+    <section class="hero">
+        <div class="container">
+            <h1>Научный подход к вашей привлекательности</h1>
+            <p>Управляйте изменениями лица и тела без необратимых ошибок. Авторские онлайн-курсы трансформации внешности на основе доказательной медицины и передовых западных протоколов.</p>
+            <button class="btn" onclick="alert('Регистрация на диагностику открыта!')">Подобрать программу трансформации</button>
